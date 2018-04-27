@@ -5,6 +5,6 @@ Simple card reader for National Health Insurance IC card.
   User can use this program to read the
   NHI IC card's basic information.
 
-Include :`NHI IC Card ID``Name``ID``Gender``Issue date`
+Include :`NHI IC Card ID` `Name` `ID` `Gender` `Issue date`
 
 
