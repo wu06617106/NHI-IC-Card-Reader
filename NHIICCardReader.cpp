@@ -83,8 +83,7 @@ int NHIICCardReader::ReadSCardInfo(NHIInfo &icInfo)
 				}
 				else
 				{
-					//cout << "SCardConnect failed" << endl;
-					THLOG(th::Info) << "SCard Connect failed.";
+					cout << "SCard Connect failed." << endl;
 					return -1;
 				}
 			}
