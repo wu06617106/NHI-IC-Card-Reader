@@ -8,3 +8,4 @@ Simple card reader for National Health Insurance IC card.
 Include :`NHI IC Card ID` `Name` `ID` `Gender` `Issue date`
 
 
+Need to add `winscard.lib` into additional dependencies in VS2013.
