@@ -6,10 +6,10 @@ int main(int argc, char *argv[])
 	if (NHIICCardReader::ReadSCardInfo(info) == 0)
 	{
 		cout << endl;
-		cout << "姓名:" << info.name << endl;
-		cout << "身分證字號:" << info.id << endl;
-		cout << "生日:" << info.birthDate << endl;
-		cout << "性別:" << info.gender << endl;
+		cout << "Name: " << info.name << endl;
+		cout << "ID: " << info.id << endl;
+		cout << "Birthday: " << info.birthDate << endl;
+		cout << "Gender: " << info.gender << endl;
 	}
 	system("pause");
 	return 0;
