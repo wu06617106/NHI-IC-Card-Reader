@@ -108,7 +108,7 @@ NHIInfo NHIICCardReader::SplitInfoString(char const*info, int length)
 	NHIInfo icInfo;
 	icInfo.name = RetrieveStringByIndex(info, 12, 31, length);
 	icInfo.id = RetrieveStringByIndex(info, 32, 41, length);
-	icInfo.birthDate = RetrieveStringByIndex(info, 42, 48, length);
+	icInfo.birthDay = RetrieveStringByIndex(info, 42, 48, length);
 	icInfo.gender = RetrieveStringByIndex(info, 49, 49, length);
 	return icInfo;
 }
