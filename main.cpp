@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 		cout << endl;
 		cout << "Name: " << info.name << endl;
 		cout << "ID: " << info.id << endl;
-		cout << "Birthday: " << info.birthDate << endl;
+		cout << "Birthday: " << info.birthDay << endl;
 		cout << "Gender: " << info.gender << endl;
 	}
 	system("pause");
