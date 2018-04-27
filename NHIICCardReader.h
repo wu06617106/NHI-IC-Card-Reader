@@ -14,7 +14,7 @@ struct NHIInfo
 {
 	string name = "";
 	string id = "";
-	string birthDate = "";
+	string birthDay = "";
 	string gender = "";
 };
 
