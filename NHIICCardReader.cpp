@@ -21,10 +21,10 @@ int NHIICCardReader::ReadSCardInfo(NHIInfo &icInfo)
 				LPCSCARD_IO_REQUEST ioRequest = SCARD_PCI_T0;
 				bool isConnected = false;
         
-        /*Try to connect with T0 protocol.
-          If it is failed, then try with T1 protocol.
-        */
-        if (SCardConnect(hContext, mszReaders, SCARD_SHARE_EXCLUSIVE,
+				/*Try to connect with T0 protocol.
+				  If it is failed, then try with T1 protocol.
+				*/
+				if (SCardConnect(hContext, mszReaders, SCARD_SHARE_EXCLUSIVE,
 					SCARD_PROTOCOL_T0, &hCard, 0) == 0)
 				{
 					ioRequest = SCARD_PCI_T0;
@@ -54,15 +54,15 @@ int NHIICCardReader::ReadSCardInfo(NHIInfo &icInfo)
 					profileRecvLength = sizeof(profileRecvBytes);
 					readProfileAPDULength = sizeof(readProfileAPDU);
           
-          /* Transmit select profile APDU to smart card.
-          */
+					  /* Transmit select profile APDU to smart card.
+					  */
 					if (SCardTransmit(hCard, ioRequest, selectAPDU, selectAPDULength,
 						&pioRecvPci, pbRecvBuffer, &dwRecvLength) == 0)
 					{
 						cout << "Select Profile APDU success." << endl;
             
-            /* Transmit read profile APDU to smart card.
-            */
+						/* Transmit read profile APDU to smart card.
+						*/
 						if (SCardTransmit(hCard, ioRequest, readProfileAPDU, readProfileAPDULength,
 							&pioRecvPci, profileRecvBytes, &profileRecvLength) == 0)
 						{
